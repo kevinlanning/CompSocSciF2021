@@ -1,5 +1,5 @@
 ---
-title: "IntroDataSci"
+title: "CompSocSci"
 ---
 
-Course website for Wilkes Honors College Introduction to Data Science, Spring 2021.
+Course website for Wilkes Honors College .
