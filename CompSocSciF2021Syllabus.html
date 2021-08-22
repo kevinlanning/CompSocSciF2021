@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>syllabus: honors computational social science</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">honors comp soc sci</a>
+</li>
+<li>
+  <a href="CompSocSciF2021Syllabus.html">syllabus</a>
+</li>
+<li>
+  <a href="CompSocSciF2021Schedule.html">schedule</a>
+</li>
+<li>
+  <a href="http://networksciencebook.com/">network science (Barabasi)</a>
+</li>
+<li>
+  <a href="https://sicss.io/overview">sicss (Bail, Salganik)</a>
+</li>
+<li>
+  <a href="https://www.bitbybitbook.com/en/1st-ed/preface/">bit by bit (Salganik)</a>
+</li>
+<li>
+  <a href="https://www.tidytextmining.com/">tidytext (Silge, Robinson)</a>
+</li>
+<li>
+  <a href="https://canvas.fau.edu/courses/105969">canvas</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">syllabus: honors computational social science</h1>
+<h4 class="author"></h4>
+
+</div>
+
+
+<p>This document is current as of 2021-08-22. An updated version may be found at <a href="https://kevinlanning.github.io/CompSocSciF2021/"><em>https://kevinlanning.github.io/CompSocSciF2021/</em></a>.</p>
+<div id="basics" class="section level3">
+<h3>basics</h3>
+<p>This is <strong>ISS 4304 Section 1</strong>. It is a 3-credit class offered in the <strong>Fall 2021</strong> term. The class meets <strong>MW 930-11 in SR 283 and on the Zoom platform.</strong> There is no lab.</p>
+<p>The professor is Kevin Lanning. My office hours are <strong>TTh 2-4;</strong> these will typically be held virtually, but if you would like to meet me in person we can schedule an appointment on the Jupiter campus (please send me an email, or ask me in class). You may schedule virtual appointments at <a href="https://calendly.com/kevin-lanning/student-advising" class="uri">https://calendly.com/kevin-lanning/student-advising</a>. My office phone is (561) 594-1018, but it is quicker to reach me via email at <a href="mailto:lanning@fau.edu" class="email">lanning@fau.edu</a>.</p>
+<p><strong>course prerequisites / co-requisites</strong>: (STA 2023 (Introduction to Statistics) and COP 3076 (Introduction to Data Science)) or permission of instructor are prerequisites.</p>
+<p><strong>course description:</strong> COP 3076 is a seminar in computational social science.</p>
+<p><strong>course delivery mode:</strong> Live/in person with Zoom option. Students attending in person should bring laptops and, if available, headsets to facilitate interaction with remote peers.</p>
+<p><strong>note of honors distinction:</strong> The course receives honors credit by virtue of its small class size, by virtue of a dialectic approach in the classroom structure, and by the fact that students receive extensive exposure to supplementary materials and primary sources. This course differs substantially from a non-Honors course in that (a) the expectations for participation in class discussions will be greater than in a typical undergraduate course with a larger number of students, (b) class projects will be undertaken in heterogeneous groups in which students will be teaching and learning from their peers as well as the instructor, (c) assignments and expectations will be, to some extent, tailored to the backgrounds and interests of the individual student (d) the data sets we will collaboratively examine will be chosen to foster disciplinary breadth.</p>
+</div>
+<div id="course-description-and-objectives" class="section level3">
+<h3>course description and objectives</h3>
+<p>New technologies have created new opportunities for the understanding of social behavior, and, with it, new threats to privacy and equality. In ISS 4304, we will (a) review selected examples of computational research from the social sciences, and (b) gain training in methods such as natural language analysis and social network analysis in the service of (c) research projects in which students will collaboratively implement these techniques in case studies of social phenomena. Objectives include greater mastery of the aforementioned techniques, of the R programming language and reproducible methods, and consideration of the responsibilities of data analysis and data stewardship in the contemporary world.</p>
+<p>The course is intended to serve students in all concentrations of the Wilkes Honors College, particularly those in the behavioral and social sciences of economics, psychology, linguistics, geography, anthropology, and sociology, as well as students anticipating working in data-intensive careers.</p>
+<p>We will primarily be working using a variety of tools for statistical computing, including the R programming language and Gephi (a tool for network visualization). In addition, we’ll use tools for communication and collaboration and spreadsheets such as Excel or Google Sheets.</p>
+</div>
+<div id="student-learning-outcomes" class="section level3">
+<h3>student learning outcomes</h3>
+<p>The course is intended to count towards FAU’s Undergraduate Research Certificate program by virtue of its emphases on</p>
+<p>· helping students to formulate questions (students will formulate research questions, scholarly or creative problems with integration of fundamental principles and knowledge in a manner appropriate to Computational Social Science),</p>
+<p>· critical thinking (students will apply critical thinking skills to evaluate information, their own work, and the work of others),</p>
+<p>· ethical conduct (students will identify significant ethical issues in research and inquiry in Computational Social Science),</p>
+<p>· as well as helping them to develop plans of action - in essence, programs - to address research and inquiry questions or scholarly problems, and finally,</p>
+<p>· communication, ranging from annotating code to facilitate reproducibility to designing data visualizations which are clear, effective, and truthful.</p>
+</div>
+<div id="required-texts-and-materials" class="section level3">
+<h3>required texts and materials</h3>
+<p>Barabási, A.-L. (2016). <em>Network science</em>. Cambridge university press. (free online or not-for-free in hardcopy)</p>
+<p>Salganik, M. (2019). <em>Bit by Bit: Social Research in the Digital Age</em>. Princeton University Press. (free online or not-for-free in hardcopy)</p>
+<p>Silge, J., &amp; Robinson, D. (2017). Text Mining with R: A Tidy Approach. O’Reilly Media, Inc.</p>
+<p>Wickham, H., &amp; Grolemund, G. (2016). <em>R for data science: Import, tidy, transform, visualize, and model data</em>. O’Reilly Media, Inc. (free online or not-for-free in hardcopy)</p>
+<p>In addition, there are many articles on canvas, most of which are listed below.</p>
+</div>
+<div id="course-assessments-assignments-grading-policy" class="section level3">
+<h3>course assessments, assignments, &amp; grading policy</h3>
+<p>Grades will be based on a 100-point scale, with points earned by participation, homework and quizzes, self-assessments, two term projects, and a final exam.</p>
+<p><strong>participation</strong> (10 points). Attendance is a necessary but not sufficient part of class participation. Your participation grade will be based also on the extent to which you contribute to our class by asking constructive questions and helping your classmates solve the numerous challenges which we will collectively face. That is, you can earn participation points by showing up, learning, engaging, and helping your classmates.</p>
+<p><strong>self-assessments</strong> (30 points). I anticipate that each of you in this small class will have different objectives, and that you will make progress in different ways. Accordingly, I will ask you to provide three structured, evidence-based self-assessments during the course of the term, in which you will briefly document progress on a subset of questions such as</p>
+<ul>
+<li>What have you read, and what have you learned?</li>
+<li>What analyses/visualizations have you done?</li>
+<li>Who have you helped (and how did you help them)?</li>
+<li>What is the next step in your work?</li>
+</ul>
+<p><strong>two term projects</strong> (40 points). Learning is social. The term projects will be collaborative projects which you will undertake with one to four of your peers. Each project will include a short paper (~ 12 pages) and serve as the basis for an informative presentation to the class. In order for us to assess your individual contributions and to minimize social loafing, I ask that all group members sign a cover page describing the primary contribution and percent effort of each person. You’ll present your projects in class; the first near the middle of the term, the second towards the end of the term.</p>
+<p><strong>a final exam</strong> (20 points). This will include questions about the technical and ethical challenges in working with social data and a fourth evidence-based self-assessment.</p>
+<p><strong>time commitment per credit hour:</strong> This course has three (3) credit hours. For traditionally delivered courses, not less than one (1) hour of classroom or direct faculty instruction each week is expected for fifteen (15) weeks per Fall or Spring semester, and a minimum of two (2) hours of out-of-class student work for each credit hour. Equivalent time and effort is required for Summer Semesters, which usually have a shortened timeframe. Fully online courses, hybrid, shortened, intensive format courses, and other non-traditional modes of delivery will demonstrate equivalent time and effort.</p>
+</div>
+<div id="course-grading-scale" class="section level3">
+<h3>course grading scale</h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;">
+grade
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+A-
+</td>
+<td style="text-align:left;">
+B+
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+B-
+</td>
+<td style="text-align:left;">
+C+
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+C-
+</td>
+<td style="text-align:left;">
+D+
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+D-
+</td>
+<td style="text-align:left;">
+F
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+min
+</td>
+<td style="text-align:left;">
+93
+</td>
+<td style="text-align:left;">
+90
+</td>
+<td style="text-align:left;">
+87
+</td>
+<td style="text-align:left;">
+83
+</td>
+<td style="text-align:left;">
+80
+</td>
+<td style="text-align:left;">
+77
+</td>
+<td style="text-align:left;">
+73
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+67
+</td>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:left;">
+60
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+max
+</td>
+<td style="text-align:left;">
+100
+</td>
+<td style="text-align:left;">
+92
+</td>
+<td style="text-align:left;">
+89
+</td>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+82
+</td>
+<td style="text-align:left;">
+79
+</td>
+<td style="text-align:left;">
+76
+</td>
+<td style="text-align:left;">
+72
+</td>
+<td style="text-align:left;">
+69
+</td>
+<td style="text-align:left;">
+66
+</td>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:left;">
+59
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>note that in borderline cases, students may receive the higher of two grades if there is evidence of sustained effort and/or improvement over the course of the term</em></p>
+</div>
+<div id="schedule-and-due-dates" class="section level2">
+<h2>schedule and due dates</h2>
+<p>The schedule is a dynamic document. While due dates for exams are, pending any university-wide mandates, fixed, all other dates and content are subject to change. Please monitor the announcements in Canvas for the latest updates. Our working schedule may be found at <a href="https://bit.ly/CompSocSciF2021Schedule" class="uri">https://bit.ly/CompSocSciF2021Schedule</a>. Here is the schedule as of 2021-08-22:</p>
+<iframe width="800" height="600" src="https://docs.google.com/spreadsheets/d/1q5sjUNqW3YAY27_HnVSrVuf9OedxNawlEQjZSV3pfTY/edit?usp=sharing">
+</iframe>
+<p>Again, please see <a href="https://bit.ly/CompSocSciF2021Schedule" class="uri">https://bit.ly/CompSocSciF2021Schedule</a> for the latest updates.</p>
+<div id="course-policies" class="section level3">
+<h3>course policies</h3>
+<p><strong>incomplete grade policy:</strong> University policy states that a student who is passing a course, but has not completed all work due to exceptional circumstances, may, with consent of the instructor, temporarily receive a grade of incomplete (“I”). The assignment of the “I” grade is at the discretion of the instructor, but is allowed only if the student is passing the course.</p>
+<p><strong>attendance policy:</strong> Students are expected to attend all of their scheduled University classes and to satisfy all academic objectives as outlined by the instructor. The effect of absences upon grades is determined by the instructor, and the University reserves the right to deal at any time with individual cases of non-attendance. Students are responsible for arranging to make up work missed because of legitimate class absence, such as illness, family emergencies, military obligation, court-imposed legal obligations or participation in University-approved activities. Examples of University-approved reasons for absences include participating on an athletic or scholastic team, musical and theatrical performances and debate activities. It is the student’s responsibility to give the instructor notice prior to any anticipated absences and within a reasonable amount of time after an unanticipated absence, ordinarily by the next scheduled class meeting. Instructors must allow each student who is absent for a University-approved reason the opportunity to make up work missed without any reduction in the student’s final course grade as a direct result of such absence.</p>
+<p>(Clause added August 21 per FAU directive) <strong>“I will deliver this class, as scheduled, in-person and will provide a remote option for students who are asked to isolate or quarantine or are unable to attend a class in-person for any other reason. Please note: All students may be required to attend in-person classes on specific dates at my discretion, for example to complete examinations. For students planning to attend in-person, I will teach in-person classes in the assigned classroom and on the scheduled day and time. For students who are unable to attend a class session in-person, I will provide course content in a remote format. I will post details on how a student can join the class remotely in Canvas. Please contact me if you have questions.”</strong></p>
+<p><strong>special course requirements</strong>: None.</p>
+</div>
+<div id="additional-selected-university-college-policies" class="section level3">
+<h3>additional selected university &amp; college policies</h3>
+<p><strong>classroom etiquette/disruptive behavior policy statement:</strong> Disruptive behavior is defined in the FAU Student Code of Conduct as “… activities which interfere with the educational mission within classroom.” Students who disrupt the educational experiences of other students and/or the instructor’s course objectives in a face-to-face or online course are subject to disciplinary action. Such behavior impedes students’ ability to learn or an instructor’s ability to teach. Disruptive behavior may include, but is not limited to non-approved use of electronic devices (including cellular telephones); cursing or shouting at others in such a way as to be disruptive; or, other violations of an instructor’s expectations for classroom conduct. For more information, please see the <a href="http://www.fau.edu/studentconduct/">FAU Office of Student Conduct</a>.</p>
+<p><strong>code of academic integrity policy statement:</strong> Students at Florida Atlantic University should endeavor to maintain the highest ethical standards. Academic dishonesty is a serious breach of these ethical standards, because it interferes with the University mission to provide a high quality education in which no student enjoys an unfair advantage over any other. Academic dishonesty is also destructive to the university community, which is grounded in a system of mutual trust and places high value on personal integrity and individual responsibility. Harsh penalties are associated with academic dishonesty. For more information, see <a href="http://www.fau.edu/regulations/chapter4/4.001_Code_of_Academic_Integrity.pdf">University Regulation 4.001</a> and the WHC code at <a href="http://www.fau.edu/honors/academics/honor-code.php" class="uri">http://www.fau.edu/honors/academics/honor-code.php</a>.</p>
+<p><a href="http://libguides.fau.edu/c.php?g=325629&amp;p=2352760"><strong>Plagiarism</strong></a> is the deliberate use and appropriation of another’s work without identifying the source and trying to pass off such work as one’s own. Any student who fails to give full credit for ideas or materials taken from another has plagiarized. This includes all discussion board posts, journal entries, wikis, and other written and oral presentation assignments. Plagiarism is unacceptable in the University community. Academic work must be an original work of your own thought, research, or self-expression. When students borrow ideas, wording, or organization from another source, they must acknowledge that fact in an appropriate manner. If in doubt, cite your source.</p>
+<p><strong>disability (accessibility) policy statement:</strong> In compliance with the Americans with Disabilities Act Amendments Act (ADAAA), students who require reasonable accommodations due to a disability to properly execute coursework must register with Student Accessibility Services (SAS) and follow all SAS procedures. SAS has offices across three of FAU’s campuses – Boca Raton, Davie and Jupiter – however disability services are available for students on all campuses. For more information, please visit the SAS website at <a href="http://www.fau.edu/sas/">www.fau.edu/sas/</a>.</p>
+<p><strong>grade appeal process:</strong> You may request a review of the final course grade when you believe that one of the following conditions apply: There was a computational or recording error in the grading, the grading process used non-academic criteria, there was a gross violation of the instructor’s own grading system. <a href="http://www.fau.edu/regulations/chapter4/index.php">Chapter 4 of the University Regulations</a> contains information on the grade appeals process.</p>
+<p><strong>religious accommodation policy statement:</strong> In accordance with rules of the Florida Board of Education and Florida law, students have the right to reasonable accommodations from the University in order to observe religious practices and beliefs with regard to admissions, registration, class attendance, and the scheduling of examinations and work assignments. For further information, please see <a href="http://www.fau.edu/academic/registrar/FAUcatalog/academics.php">Academic Policies and Regulations</a>.</p>
+<p><strong>university approved absence policy statement:</strong> In accordance with rules of the Florida Atlantic University, students have the right to reasonable accommodations to participate in University approved activities, including athletic or scholastics teams, musical and theatrical performances and debate activities. It is your responsibility to notify the instructor at least one week prior to missing any course assignment.</p>
+<p><strong>drops/withdrawals:</strong> You are responsible for completing the process of dropping or withdrawing from a course. Please click on the following link for more information on dropping and/or withdrawing from a course. Please consult the <a href="http://www.fau.edu/registrar/registration/faqs.php">FAU Registrar Office</a> for more information.</p>
+<p><strong>counseling and psychological services (CAPS) center:</strong> Life as a university student can be challenging physically, mentally and emotionally. Students who find stress negatively affecting their ability to achieve academic or personal goals may wish to consider utilizing FAU’s Counseling and Psychological Services (CAPS) Center. CAPS provides FAU students a range of services – individual counseling, support meetings, and psychiatric services, to name a few – offered to help improve and maintain emotional well-being. For more information, go to _<a href="http://www.fau.edu/counseling/"><em>http://www.fau.edu/counseling/</em></a>.</p>
+<p><strong><em>COVID-19 statement:</em></strong> All students in face-to-face classes are <del>required</del> (expected, recommended) to wear masks during class and at other times while indoors. Taking these measures supports the safety and protection of the FAU community. Students experiencing flu-like symptoms (fever, cough, shortness of breath), or students who have come in contact with an infected person should immediately contact FAU Student Health Services (<a href="tel:561-297-3512">561-297-3512</a>).</p>
+</div>
+</div>
+<div id="additional-references" class="section level2">
+<h2>additional references</h2>
+<div id="overview" class="section level4">
+<h4>Overview</h4>
+<p>Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., &amp; Gutmann, M. (2009). Computational social science. <em>Science</em>, <em>323</em>(5915), 721–723. <a href="https://doi.org/10/c9w2g3" class="uri">https://doi.org/10/c9w2g3</a></p>
+<p>Buyalskaya, A., Gallo, M., &amp; Camerer, C. F. (2021). The golden age of social science. <em>Proceedings of the National Academy of Sciences</em>, <em>118</em>(5). <a href="https://doi.org/10/ghzddk" class="uri">https://doi.org/10/ghzddk</a></p>
+<p>Lazer, D., &amp; Radford, J. (2017). Data ex Machina: Introduction to Big Data. <em>Annual Review of Sociology</em>, <em>43</em>(1), 19–39. <a href="https://doi.org/10/gcv947" class="uri">https://doi.org/10/gcv947</a></p>
+<p>Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., &amp; Radford, J. (2021). Meaningful measures of human society in the twenty-first century. <em>Nature</em>, <em>595</em>(7866), 189–196. <a href="https://doi.org/10.1038/s41586-021-03660-7" class="uri">https://doi.org/10.1038/s41586-021-03660-7</a></p>
+<p>Lazer, D., Kennedy, R., King, G., &amp; Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. <em>Science</em>, <em>343</em>(6176), 1203–1205. <a href="https://doi.org/10/rwx" class="uri">https://doi.org/10/rwx</a></p>
+<p>Sadowski, J., Viljoen, S., &amp; Whittaker, M. (2021). Everyone should decide how their digital data are used—Not just tech companies. <em>Nature</em>, <em>595</em>(7866), 169–171. <a href="https://doi.org/10.1038/d41586-021-01812-3" class="uri">https://doi.org/10.1038/d41586-021-01812-3</a></p>
+<p>Salganik, M. (2019). <em>Bit by Bit: Social Research in the Digital Age</em>. Princeton University Press. (Chapters 1.5, 2)</p>
+</div>
+<div id="big-data-and-scraping" class="section level4">
+<h4>Big data and scraping</h4>
+<p>Althoff, T., Sosič, R., Hicks, J. L., King, A. C., Delp, S. L., &amp; Leskovec, J. (2017). Large-scale physical activity data reveal worldwide activity inequality. <em>Nature</em>, <em>547</em>(7663), 336–339. <a href="https://doi.org/10/gbmk93" class="uri">https://doi.org/10/gbmk93</a></p>
+<p>Gosling, S. D., &amp; Mason, W. (2015). Internet Research in Psychology. <em>Annual Review of Psychology</em>, <em>66</em>(1), 877–902. <a href="https://doi.org/10/gfppbf" class="uri">https://doi.org/10/gfppbf</a></p>
+<p>Hao, K. (2021, March 11). How Facebook got addicted to spreading misinformation. <em>MIT Technology Review</em>. <a href="https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/" class="uri">https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/</a></p>
+<p>Ledford, H. (2020). How Facebook, Twitter and other data troves are revolutionizing social science. <em>Nature</em>, <em>582</em>(7812), 328–330. <a href="https://doi.org/10.1038/d41586-020-01747-1" class="uri">https://doi.org/10.1038/d41586-020-01747-1</a></p>
+<p>Stephens-Davidowitz, S., &amp; Varian, H. (2014). A hands-on guide to Google data. <em>Mountain View, CA</em>.</p>
+</div>
+<div id="complexity-and-dynamical-systems" class="section level4">
+<h4>Complexity and dynamical systems</h4>
+<p>Coleman, P. T., Vallacher, R. R., Nowak, A., &amp; Bui-Wrzosinska, L. (2007). Intractable Conflict as an Attractor: A Dynamical Systems Approach to Conflict Escalation and Intractability. <em>American Behavioral Scientist</em>, <em>50</em>(11), 1454–1475. <a href="https://doi.org/10/c99wp6" class="uri">https://doi.org/10/c99wp6</a></p>
+<p>Reed, S. K., &amp; Vallacher, R. R. (2019). A comparison of information processing and dynamical systems perspectives on problem solving. <em>Thinking &amp; Reasoning</em>, 1–37. <a href="https://doi.org/10.1080/13546783.2019.1605930" class="uri">https://doi.org/10.1080/13546783.2019.1605930</a></p>
+</div>
+<div id="networks-generalintroduction" class="section level4">
+<h4>Networks: General/introduction</h4>
+<p>Baronchelli, A., Ferrer-i-Cancho, R., Pastor-Satorras, R., Chater, N., &amp; Christiansen, M. H. (2013). Networks in Cognitive Science. <em>Trends in Cognitive Sciences</em>, <em>17</em>(7), 348–360. <a href="https://doi.org/10.1016/j.tics.2013.04.010" class="uri">https://doi.org/10.1016/j.tics.2013.04.010</a></p>
+<p>DiMaggio, P., &amp; Garip, F. (2012). Network Effects and Social Inequality. <em>Annual Review of Sociology</em>, <em>38</em>(1), 93–118. <a href="https://doi.org/10/gf6kjc" class="uri">https://doi.org/10/gf6kjc</a></p>
+<p>Giles, J. (2012, August 22). <em>Computational social science: Making the links</em> [News]. Nature. <a href="https://doi.org/10.1038/488448a" class="uri">https://doi.org/10.1038/488448a</a></p>
+<p>Milgram, S. (1967). The small world problem. <em>Psychology Today</em>, <em>2</em>(1), 60–67.</p>
+<p>Watts, D. J. (2004). The “New” Science of Networks. <em>Annual Review of Sociology</em>, <em>3</em>, 243–270.</p>
+</div>
+<div id="networks-graph-theory-and-balance" class="section level4">
+<h4>Networks: Graph theory and balance</h4>
+<p>Barabasi Chapter 2-4</p>
+<p>Harary, F. (1959). On the measurement of structural balance. <em>Behavioral Science</em>, <em>4</em>(4), 316–323. <a href="https://doi.org/10/cp9nfp" class="uri">https://doi.org/10/cp9nfp</a></p>
+<p>Lai, D. (2001). Alignment, Structural Balance, and International Conflict in the Middle East, 1948-1978. <em>Conflict Management and Peace Science</em>, <em>18</em>(2), 211–249. <a href="https://doi.org/10.1177/073889420101800203" class="uri">https://doi.org/10.1177/073889420101800203</a></p>
+</div>
+<div id="networks-depicting" class="section level4">
+<h4>Networks: Depicting</h4>
+<p>Bastian, M., Heymann, S., &amp; Jacomy, M. (2009, March 19). Gephi: An Open Source Software for Exploring and Manipulating Networks. <em>Third International AAAI Conference on Weblogs and Social Media</em>. Third International AAAI Conference on Weblogs and Social Media. <a href="https://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154" class="uri">https://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154</a></p>
+<p>Palla, G., Derényi, I., Farkas, I., &amp; Vicsek, T. (2005). Uncovering the overlapping community structure of complex networks in nature and society. <em>Nature</em>, <em>435</em>(7043), 814–818. <a href="https://doi.org/10.1038/nature03607" class="uri">https://doi.org/10.1038/nature03607</a></p>
+</div>
+<div id="networks-bibliometrics" class="section level4">
+<h4>Networks: Bibliometrics</h4>
+<p>Edelmann, A., Wolff, T., Montagne, D., &amp; Bail, C. A. (2020). Computational Social Science and Sociology. <em>Annual Review of Sociology</em>, <em>46</em>(1), 61–81. <a href="https://doi.org/10/gg4zvc" class="uri">https://doi.org/10/gg4zvc</a></p>
+<p>Lanning, K. (2017). What is the Relationship Between “Personality” and “Social” Psychologies? Network, Community, and Whole Text Analyses of The Structure of Contemporary Scholarship. <em>Collabra: Psychology</em>, <em>3</em>(1), 8. <a href="https://doi.org/10/gf5299" class="uri">https://doi.org/10/gf5299</a></p>
+</div>
+<div id="networks-contagion" class="section level4">
+<h4>Networks: Contagion</h4>
+<p>Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D. I., Marlow, C., Settle, J. E., &amp; Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. <em>Nature</em>, <em>489</em>(7415), 295–298. <a href="https://doi.org/10/f3689v" class="uri">https://doi.org/10/f3689v</a></p>
+<p>Buckee, C., Noor, A., &amp; Sattenspiel, L. (2021). Thinking clearly about social aspects of infectious disease transmission. <em>Nature</em>, <em>595</em>(7866), 205–213. <a href="https://doi.org/10/gkzwmj" class="uri">https://doi.org/10/gkzwmj</a></p>
+<p>Cacioppo, J. T., Fowler, J. H., &amp; Christakis, N. A. (2009). Alone in the crowd: The structure and spread of loneliness in a large social network. <em>Journal of Personality and Social Psychology</em>, <em>97</em>(6), 977–991. <a href="https://doi.org/10.1037/a0016076" class="uri">https://doi.org/10.1037/a0016076</a></p>
+<p>Christakis, N. A., &amp; Fowler, J. H. (2013). Social contagion theory: Examining dynamic social networks and human behavior. <em>Statistics in Medicine</em>, <em>32</em>(4), 556–577. <a href="https://doi.org/10/ck2j" class="uri">https://doi.org/10/ck2j</a></p>
+<p>Johnson, N. F., Velásquez, N., Restrepo, N. J., Leahy, R., Gabriel, N., El Oud, S., Zheng, M., Manrique, P., Wuchty, S., &amp; Lupu, Y. (2020). The online competition between pro- and anti-vaccination views. <em>Nature</em>, <em>582</em>(7811), 230–233. <a href="https://doi.org/10/ggvvjx" class="uri">https://doi.org/10/ggvvjx</a></p>
+<p>Miller, G. (2011). Why Loneliness Is Hazardous to Your Health. <em>Science</em>, <em>331</em>(6014), 138–140. <a href="https://doi.org/10.1126/science.331.6014.138" class="uri">https://doi.org/10.1126/science.331.6014.138</a></p>
+<p>Vosoughi, S., Roy, D., &amp; Aral, S. (2018). The spread of true and false news online. <em>Science</em>, <em>359</em>(6380), 1146–1151. <a href="https://doi.org/10/gc3jt6" class="uri">https://doi.org/10/gc3jt6</a></p>
+</div>
+<div id="networks-cooperation" class="section level4">
+<h4>Networks: Cooperation</h4>
+<p>Apicella, C. L., Marlowe, F. W., Fowler, J. H., &amp; Christakis, N. A. (2012). Social networks and cooperation in hunter-gatherers. <em>Nature</em>, <em>481</em>(7382), 497–501. <a href="https://doi.org/10/fz3v4v" class="uri">https://doi.org/10/fz3v4v</a></p>
+</div>
+<div id="networks-the-multivariate-approach" class="section level4">
+<h4>Networks: The multivariate approach</h4>
+<p>Boschloo, L., van Borkulo, C. D., Rhemtulla, M., Keyes, K. M., Borsboom, D., &amp; Schoevers, R. A. (2015). The Network Structure of Symptoms of the Diagnostic and Statistical Manual of Mental Disorders. <em>PLOS ONE</em>, <em>10</em>(9), e0137621. <a href="https://doi.org/10/gfsz67" class="uri">https://doi.org/10/gfsz67</a></p>
+</div>
+<div id="language-analysis-introduction-and-overview" class="section level4">
+<h4>Language analysis: Introduction and overview</h4>
+<p>Benoit, K. (2019). <em>Chapter 28 Text as data: An overview</em>. 50.</p>
+<p>Mitra, T., &amp; Gilbert, E. (2014). The language that gets people to give: Phrases that predict success on kickstarter. <em>Proceedings of the 17th ACM Conference on Computer Supported Cooperative Work &amp; Social Computing</em>, 49–61. <a href="https://doi.org/10/gfrhh8" class="uri">https://doi.org/10/gfrhh8</a></p>
+<p>Pennebaker, J. W., Chung, C. K., Frazee, J., Lavergne, G. M., &amp; Beaver, D. I. (2014). When Small Words Foretell Academic Success: The Case of College Admissions Essays. <em>PLoS ONE</em>, <em>9</em>(12), e115844. <a href="https://doi.org/10/f6z8q5" class="uri">https://doi.org/10/f6z8q5</a></p>
+<p>Pennebaker, J. W., Boyd, R. L., Jordan, K., &amp; Blackburn, K. (2015). <em>The Development and Psychometric Properties of LIWC2015</em>. 26.</p>
+<p>Voigt, R., Camp, N. P., Prabhakaran, V., Hamilton, W. L., Hetey, R. C., Griffiths, C. M., Jurgens, D., Jurafsky, D., &amp; Eberhardt, J. L. (2017). Language from police body camera footage shows racial disparities in officer respect. <em>Proceedings of the National Academy of Sciences</em>, <em>114</em>(25), 6521–6526. <a href="https://doi.org/10/gbktk7" class="uri">https://doi.org/10/gbktk7</a></p>
+</div>
+<div id="language-analysis-and-personality" class="section level4">
+<h4>Language analysis and personality</h4>
+<p>Lanning, K., Pauletti, R. E., King, L. A., &amp; McAdams, D. P. (2018). Personality development through natural language. <em>Nature Human Behaviour</em>, <em>2</em>(5), 327–334. <a href="https://doi.org/10/gf5298" class="uri">https://doi.org/10/gf5298</a></p>
+<p>Kern, M. L., Eichstaedt, J. C., Schwartz, H. A., Park, G., Ungar, L. H., Stillwell, D. J., Kosinski, M., Dziurzynski, L., &amp; Seligman, M. E. P. (2014). From “Sooo excited!!!” to “So proud”: Using language to study development. <em>Developmental Psychology</em>, <em>50</em>(1), 178–188. <a href="https://doi.org/10.1037/a0035048" class="uri">https://doi.org/10.1037/a0035048</a></p>
+<p>Kosinski, M., Stillwell, D., &amp; Graepel, T. (2013). Private traits and attributes are predictable from digital records of human behavior. <em>Proceedings of the National Academy of Sciences</em>, <em>110</em>(15), 5802–5805. <a href="https://doi.org/10/krx" class="uri">https://doi.org/10/krx</a></p>
+<p>Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., &amp; Ungar, L. H. (2013). Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach. <em>PLoS ONE</em>, <em>8</em>(9), e73791. <a href="https://doi.org/10/gdf36c" class="uri">https://doi.org/10/gdf36c</a></p>
+</div>
+<div id="language-analyses-of-twitter-facebook-and-the-like" class="section level4">
+<h4>Language analyses of Twitter, Facebook and the like</h4>
+<p>Jones, N. M., Wojcik, S. P., Sweeting, J., &amp; Silver, R. C. (2016). Tweeting negative emotion: An investigation of Twitter data in the aftermath of violence on college campuses. <em>Psychological Methods</em>, <em>21</em>(4), 526–541. <a href="https://doi.org/10.1037/met0000099" class="uri">https://doi.org/10.1037/met0000099</a></p>
+<p>Lanning, K., Wetherell, G., Warfel, E. A., &amp; Boyd, R. L. (2021). Changing channels? A comparison of Fox and MSNBC in 2012, 2016, and 2020. <em>Analyses of Social Issues and Public Policy (ASAP)</em>. <a href="https://eprints.lancs.ac.uk/id/eprint/157304/" class="uri">https://eprints.lancs.ac.uk/id/eprint/157304/</a></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

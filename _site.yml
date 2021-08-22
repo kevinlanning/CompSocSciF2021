@@ -1,17 +1,22 @@
-name: "intro to data science"
+name: "comp soc sci"
 output_dir: "."
 navbar:
   title: ""
   left:
-    - text: "honors intro data sci"
+    - text: "honors comp soc sci"
       href: index.html
     - text: "syllabus"
-      href: syllabus.html
+      href: CompSocSciF2021Syllabus.html
     - text: "schedule"
-      href: schedule.html
-    - text: "R4DS (Wickham)" 
-      href: https://r4ds.had.co.nz/introduction.html
-    - text: "dsla (Lanning)"
-      href: https://kevinlanning.github.io/DataSciLibArts/
-    - text: "RStudio Cloud"
-      href: https://rstudio.cloud/
+      href: CompSocSciF2021Schedule.html
+    - text: "network science (Barabasi)" 
+      href: http://networksciencebook.com/
+    - text: "sicss (Bail, Salganik)"
+      href: https://sicss.io/overview
+    - text: "bit by bit (Salganik)"
+      href: https://www.bitbybitbook.com/en/1st-ed/preface/
+    - text: "tidytext (Silge, Robinson)"  
+      href: https://www.tidytextmining.com/
+    - text: "canvas"
+      href: https://canvas.fau.edu/courses/105969
+

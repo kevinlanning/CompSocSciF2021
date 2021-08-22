@@ -1,0 +1,11 @@
+---
+title: "Schedule"
+output:
+  html_document: default
+---
+
+The class will cover a series of modules, each of which may be covered in more than or less than a single class period.
+
+<iframe width="800" height="600" src="https://docs.google.com/spreadsheets/d/1q5sjUNqW3YAY27_HnVSrVuf9OedxNawlEQjZSV3pfTY/edit?usp=sharing">
+
+</iframe>

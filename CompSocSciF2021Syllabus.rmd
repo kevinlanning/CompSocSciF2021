@@ -1,0 +1,271 @@
+---
+title: 'syllabus: honors computational social science'
+author: ''
+date: ''
+output:
+  html_document: default
+---
+
+This document is current as of `r Sys.Date()`. An updated version may be found at [*https://kevinlanning.github.io/CompSocSciF2021/*](https://kevinlanning.github.io/CompSocSciF2021/).
+
+### basics
+
+This is **ISS 4304 Section 1**. It is a 3-credit class offered in the **Fall 2021** term. The class meets **MW 930-11 in SR 283 and on the Zoom platform.** There is no lab.
+
+The professor is Kevin Lanning. My office hours are **TTh 2-4;** these will typically be held virtually, but if you would like to meet me in person we can schedule an appointment on the Jupiter campus (please send me an email, or ask me in class). You may schedule virtual appointments at <https://calendly.com/kevin-lanning/student-advising>. My office phone is (561) 594-1018, but it is quicker to reach me via email at [lanning\@fau.edu](mailto:lanning@fau.edu){.email}.
+
+**course prerequisites / co-requisites**: (STA 2023 (Introduction to Statistics) and COP 3076 (Introduction to Data Science)) or permission of instructor are prerequisites.
+
+**course description:** COP 3076 is a seminar in computational social science.
+
+**course delivery mode:** Live/in person with Zoom option. Students attending in person should bring laptops and, if available, headsets to facilitate interaction with remote peers. 
+
+**note of honors distinction:** The course receives honors credit by virtue of its small class size, by virtue of a dialectic approach in the classroom structure, and by the fact that students receive extensive exposure to supplementary materials and primary sources. This course differs substantially from a non-Honors course in that (a) the expectations for participation in class discussions will be greater than in a typical undergraduate course with a larger number of students, (b) class projects will be undertaken in heterogeneous groups in which students will be teaching and learning from their peers as well as the instructor, (c) assignments and expectations will be, to some extent, tailored to the backgrounds and interests of the individual student (d) the data sets we will collaboratively examine will be chosen to foster disciplinary breadth.
+
+### course description and objectives
+
+New technologies have created new opportunities for the understanding of social behavior, and, with it, new threats to privacy and equality. In ISS 4304, we will (a) review selected examples of computational research from the social sciences, and (b) gain training in methods such as natural language analysis and social network analysis in the service of (c) research projects in which students will collaboratively implement these techniques in case studies of social phenomena. Objectives include greater mastery of the aforementioned techniques, of the R programming language and reproducible methods, and consideration of the responsibilities of data analysis and data stewardship in the contemporary world.
+
+The course is intended to serve students in all concentrations of the Wilkes Honors College, particularly those in the behavioral and social sciences of economics, psychology, linguistics, geography, anthropology, and sociology, as well as students anticipating working in data-intensive careers.  
+
+We will primarily be working using a variety of tools for statistical computing, including the R programming language and Gephi (a tool for network visualization).  In addition, we'll use tools for communication and collaboration and spreadsheets such as Excel or Google Sheets.
+
+### student learning outcomes
+
+The course is intended to count towards FAU's Undergraduate Research Certificate program by virtue of its emphases on 
+
+·    helping students to formulate questions (students will formulate research questions, scholarly or creative problems with integration of fundamental principles and knowledge in a manner appropriate to Computational Social Science), 
+
+·    critical thinking (students will apply critical thinking skills to evaluate information, their own work, and the work of others), 
+
+·    ethical conduct (students will identify significant ethical issues in research and inquiry in Computational Social Science), 
+
+·    as well as helping them to develop plans of action - in essence, programs - to address research and inquiry questions or scholarly problems, and finally, 
+
+·    communication, ranging from annotating code to facilitate reproducibility to designing data visualizations which are clear, effective, and truthful.
+
+### required texts and materials
+
+Barabási, A.-L. (2016). *Network science*. Cambridge university press. (free online or not-for-free in hardcopy)
+
+Salganik, M. (2019). *Bit by Bit: Social Research in the Digital Age*. Princeton University Press. (free online or not-for-free in hardcopy)
+
+Silge, J., & Robinson, D. (2017). Text Mining with R: A Tidy Approach. O’Reilly Media, Inc.
+
+Wickham, H., & Grolemund, G. (2016). *R for data science: Import, tidy, transform, visualize, and model data*. O’Reilly Media, Inc. (free online or not-for-free in hardcopy)
+
+In addition, there are many articles on canvas, most of which are listed below.
+
+### course assessments, assignments, & grading policy
+
+Grades will be based on a 100-point scale, with points earned by participation, homework and quizzes, self-assessments,  two term projects, and a final exam.
+
+**participation** (10 points). Attendance is a necessary but not sufficient part of class participation. Your participation grade will be based also on the extent to which you contribute to our class by asking constructive questions and helping your classmates solve the numerous challenges which we will collectively face. That is, you can earn participation points by showing up, learning, engaging, and helping your classmates.
+
+**self-assessments** (30 points).  I anticipate that each of you in this small class will have different objectives, and that you will make progress in different ways. Accordingly, I will ask you to provide three structured, evidence-based self-assessments during the course of the term, in which you will briefly document progress on a subset of questions such as 
+
+- What have you read, and what have you learned? 
+- What analyses/visualizations have you done? 
+- Who have you helped (and how did you help them)?
+- What is the next step in your work?
+
+**two term projects** (40 points). Learning is social. The term projects will be collaborative projects which you will undertake with one to four of your peers. Each project will include a short paper (~ 12 pages) and serve as the basis for an informative presentation to the class. In order for us to assess your individual contributions and to minimize social loafing, I ask that all group members sign a cover page describing the primary contribution and percent effort of each person. You'll present your projects in class; the first near the middle of the term, the second towards the end of the term.
+
+**a final exam** (20 points). This will include questions about the technical and ethical challenges in working with social data and a fourth evidence-based self-assessment.
+
+**time commitment per credit hour:** This course has three (3) credit hours. For traditionally delivered courses, not less than one (1) hour of classroom or direct faculty instruction each week is expected for fifteen (15) weeks per Fall or Spring semester, and a minimum of two (2) hours of out-of-class student work for each credit hour. Equivalent time and effort is required for Summer Semesters, which usually have a shortened timeframe. Fully online courses, hybrid, shortened, intensive format courses, and other non-traditional modes of delivery will demonstrate equivalent time and effort.
+
+### course grading scale
+
+```{r echo=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+scale <- tibble (grade = c("A","A-","B+",
+                           "B","B-","C+",
+                           "C","C-","D+",
+                           "D","D-","F"),
+                 min = c(93, 90, 87,
+                        83, 80, 77,
+                        73, 70, 67,
+                        63, 60, 0),
+                 max = c(100, 92, 89,
+                        86, 82, 79,
+                        76, 72, 69,
+                        66, 62, 59))
+kable(t(scale)) %>% 
+    kable_styling()
+
+```
+
+*note that in borderline cases, students may receive the higher of two grades if there is evidence of sustained effort and/or improvement over the course of the term*
+
+## schedule and due dates
+
+The schedule is a dynamic document. While due dates for exams are, pending any university-wide mandates, fixed, all other dates and content are subject to change. Please monitor the announcements in Canvas for the latest updates. Our working schedule may be found at https://bit.ly/CompSocSciF2021Schedule.  Here is the schedule as of `r Sys.Date()`:
+
+<iframe width="800" height="600" src="https://docs.google.com/spreadsheets/d/1q5sjUNqW3YAY27_HnVSrVuf9OedxNawlEQjZSV3pfTY/edit?usp=sharing">
+</iframe>
+
+Again, please see https://bit.ly/CompSocSciF2021Schedule for the latest updates.
+
+### course policies
+
+**incomplete grade policy:** University policy states that a student who is passing a course, but has not completed all work due to exceptional circumstances, may, with consent of the instructor, temporarily receive a grade of incomplete ("I"). The assignment of the "I" grade is at the discretion of the instructor, but is allowed only if the student is passing the course.
+
+**attendance policy:** Students are expected to attend all of their scheduled University classes and to satisfy all academic objectives as outlined by the instructor. The effect of absences upon grades is determined by the instructor, and the University reserves the right to deal at any time with individual cases of non-attendance. Students are responsible for arranging to make up work missed because of legitimate class absence, such as illness, family emergencies, military obligation, court-imposed legal obligations or participation in University-approved activities. Examples of University-approved reasons for absences include participating on an athletic or scholastic team, musical and theatrical performances and debate activities. It is the student’s responsibility to give the instructor notice prior to any anticipated absences and within a reasonable amount of time after an unanticipated absence, ordinarily by the next scheduled class meeting. Instructors must allow each student who is absent for a University-approved reason the opportunity to make up work missed without any reduction in the student’s final course grade as a direct result of such absence.
+
+(Clause added August 21 per FAU directive) **“I will deliver this class, as scheduled, in-person and will provide a remote option for students who are asked to isolate or quarantine or are unable to attend a class in-person for any other reason. Please note: All students may be required to attend in-person classes on specific dates at my discretion, for example to complete examinations. For students planning to attend in-person, I will teach in-person classes in the assigned classroom and on the scheduled day and time. For students who are unable to attend a class session in-person, I will provide course content in a remote format. I will post details on how a student can join the class remotely in Canvas. Please contact me if you have questions.”**
+
+**special course requirements**: None.
+
+### additional selected university & college policies
+
+**classroom etiquette/disruptive behavior policy statement:** Disruptive behavior is defined in the FAU Student Code of Conduct as "... activities which interfere with the educational mission within classroom." Students who disrupt the educational experiences of other students and/or the instructor's course objectives in a face-to-face or online course are subject to disciplinary action. Such behavior impedes students' ability to learn or an instructor's ability to teach. Disruptive behavior may include, but is not limited to non-approved use of electronic devices (including cellular telephones); cursing or shouting at others in such a way as to be disruptive; or, other violations of an instructor's expectations for classroom conduct. For more information, please see the [FAU Office of Student Conduct](http://www.fau.edu/studentconduct/).
+
+**code of academic integrity policy statement:** Students at Florida Atlantic University should endeavor to maintain the highest ethical standards. Academic dishonesty is a serious breach of these ethical standards, because it interferes with the University mission to provide a high quality education in which no student enjoys an unfair advantage over any other. Academic dishonesty is also destructive to the university community, which is grounded in a system of mutual trust and places high value on personal integrity and individual responsibility. Harsh penalties are associated with academic dishonesty. For more information, see [University Regulation 4.001](http://www.fau.edu/regulations/chapter4/4.001_Code_of_Academic_Integrity.pdf) and the WHC code at <http://www.fau.edu/honors/academics/honor-code.php>.
+
+[**Plagiarism**](http://libguides.fau.edu/c.php?g=325629&p=2352760) is the deliberate use and appropriation of another's work without identifying the source and trying to pass off such work as one's own. Any student who fails to give full credit for ideas or materials taken from another has plagiarized. This includes all discussion board posts, journal entries, wikis, and other written and oral presentation assignments. Plagiarism is unacceptable in the University community. Academic work must be an original work of your own thought, research, or self-expression. When students borrow ideas, wording, or organization from another source, they must acknowledge that fact in an appropriate manner. If in doubt, cite your source.
+
+**disability (accessibility) policy statement:** In compliance with the Americans with Disabilities Act Amendments Act (ADAAA), students who require reasonable accommodations due to a disability to properly execute coursework must register with Student Accessibility Services (SAS) and follow all SAS procedures. SAS has offices across three of FAU’s campuses – Boca Raton, Davie and Jupiter – however disability services are available for students on all campuses. For more information, please visit the SAS website at [www.fau.edu/sas/](http://www.fau.edu/sas/).
+
+**grade appeal process:** You may request a review of the final course grade when you believe that one of the following conditions apply: There was a computational or recording error in the grading, the grading process used non-academic criteria, there was a gross violation of the instructor's own grading system. [Chapter 4 of the University Regulations](http://www.fau.edu/regulations/chapter4/index.php) contains information on the grade appeals process.
+
+**religious accommodation policy statement:** In accordance with rules of the Florida Board of Education and Florida law, students have the right to reasonable accommodations from the University in order to observe religious practices and beliefs with regard to admissions, registration, class attendance, and the scheduling of examinations and work assignments. For further information, please see [Academic Policies and Regulations](http://www.fau.edu/academic/registrar/FAUcatalog/academics.php).
+
+**university approved absence policy statement:** In accordance with rules of the Florida Atlantic University, students have the right to reasonable accommodations to participate in University approved activities, including athletic or scholastics teams, musical and theatrical performances and debate activities. It is your responsibility to notify the instructor at least one week prior to missing any course assignment.
+
+**drops/withdrawals:** You are responsible for completing the process of dropping or withdrawing from a course. Please click on the following link for more information on dropping and/or withdrawing from a course. Please consult the [FAU Registrar Office](http://www.fau.edu/registrar/registration/faqs.php) for more information.
+
+**counseling and psychological services (CAPS) center:** Life as a university student can be challenging physically, mentally and emotionally. Students who find stress negatively affecting their ability to achieve academic or personal goals may wish to consider utilizing FAU's Counseling and Psychological Services (CAPS) Center. CAPS provides FAU students a range of services -- individual counseling, support meetings, and psychiatric services, to name a few -- offered to help improve and maintain emotional well-being. For more information, go to \_[*http://www.fau.edu/counseling/*](http://www.fau.edu/counseling/).
+
+***COVID-19 statement:*** All students in face-to-face classes are ~~required~~ (expected, recommended) to wear masks during class and at other times while indoors. Taking these measures supports the safety and protection of the FAU community. Students experiencing flu-like symptoms (fever, cough, shortness of breath), or students who have come in contact with an infected person should immediately contact FAU Student Health Services ([561-297-3512](tel:561-297-3512)).
+
+## additional references
+
+#### Overview
+
+Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., & Gutmann, M. (2009). Computational social science. *Science*, *323*(5915), 721–723. https://doi.org/10/c9w2g3
+
+Buyalskaya, A., Gallo, M., & Camerer, C. F. (2021). The golden age of social science. *Proceedings of the National Academy of Sciences*, *118*(5). https://doi.org/10/ghzddk
+
+Lazer, D., & Radford, J. (2017). Data ex Machina: Introduction to Big Data. *Annual Review of Sociology*, *43*(1), 19–39. https://doi.org/10/gcv947
+
+Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). Meaningful measures of human society in the twenty-first century. *Nature*, *595*(7866), 189–196. https://doi.org/10.1038/s41586-021-03660-7
+
+Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. *Science*, *343*(6176), 1203–1205. https://doi.org/10/rwx
+
+Sadowski, J., Viljoen, S., & Whittaker, M. (2021). Everyone should decide how their digital data are used—Not just tech companies. *Nature*, *595*(7866), 169–171. https://doi.org/10.1038/d41586-021-01812-3
+
+Salganik, M. (2019). *Bit by Bit: Social Research in the Digital Age*. Princeton University Press. (Chapters 1.5, 2)
+
+#### Big data and scraping
+
+Althoff, T., Sosič, R., Hicks, J. L., King, A. C., Delp, S. L., & Leskovec, J. (2017). Large-scale physical activity data reveal worldwide activity inequality. *Nature*, *547*(7663), 336–339. https://doi.org/10/gbmk93
+
+Gosling, S. D., & Mason, W. (2015). Internet Research in Psychology. *Annual Review of Psychology*, *66*(1), 877–902. https://doi.org/10/gfppbf
+
+Hao, K. (2021, March 11). How Facebook got addicted to spreading misinformation. *MIT Technology Review*. https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/
+
+
+Ledford, H. (2020). How Facebook, Twitter and other data troves are revolutionizing social science. *Nature*, *582*(7812), 328–330. https://doi.org/10.1038/d41586-020-01747-1
+
+Stephens-Davidowitz, S., & Varian, H. (2014). A hands-on guide to Google data. *Mountain View, CA*.
+
+#### Complexity and dynamical systems
+
+Coleman, P. T., Vallacher, R. R., Nowak, A., & Bui-Wrzosinska, L. (2007). Intractable Conflict as an Attractor: A Dynamical Systems Approach to Conflict Escalation and Intractability. *American Behavioral Scientist*, *50*(11), 1454–1475. https://doi.org/10/c99wp6
+
+Reed, S. K., & Vallacher, R. R. (2019). A comparison of information processing and dynamical systems perspectives on problem solving. *Thinking & Reasoning*, 1–37. https://doi.org/10.1080/13546783.2019.1605930
+
+#### Networks: General/introduction
+
+Baronchelli, A., Ferrer-i-Cancho, R., Pastor-Satorras, R., Chater, N., & Christiansen, M. H. (2013). Networks in Cognitive Science. *Trends in Cognitive Sciences*, *17*(7), 348–360. https://doi.org/10.1016/j.tics.2013.04.010
+
+DiMaggio, P., & Garip, F. (2012). Network Effects and Social Inequality. *Annual Review of Sociology*, *38*(1), 93–118. https://doi.org/10/gf6kjc
+
+Giles, J. (2012, August 22). *Computational social science: Making the links* [News]. Nature. https://doi.org/10.1038/488448a
+
+Milgram, S. (1967). The small world problem. *Psychology Today*, *2*(1), 60–67.
+
+Watts, D. J. (2004). The “New” Science of Networks. *Annual Review of Sociology*, *3*, 243–270.
+
+#### Networks: Graph theory and balance
+
+Barabasi Chapter 2-4
+
+Harary, F. (1959). On the measurement of structural balance. *Behavioral Science*, *4*(4), 316–323. https://doi.org/10/cp9nfp
+
+Lai, D. (2001). Alignment, Structural Balance, and International Conflict in the Middle East, 1948-1978. *Conflict Management and Peace Science*, *18*(2), 211–249. https://doi.org/10.1177/073889420101800203
+
+
+
+#### Networks: Depicting
+
+Bastian, M., Heymann, S., & Jacomy, M. (2009, March 19). Gephi: An Open Source Software for Exploring and Manipulating Networks. *Third International AAAI Conference on Weblogs and Social Media*. Third International AAAI Conference on Weblogs and Social Media. https://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154
+
+Palla, G., Derényi, I., Farkas, I., & Vicsek, T. (2005). Uncovering the overlapping community structure of complex networks in nature and society. *Nature*, *435*(7043), 814–818. https://doi.org/10.1038/nature03607
+
+
+
+
+#### Networks: Bibliometrics
+
+Edelmann, A., Wolff, T., Montagne, D., & Bail, C. A. (2020). Computational Social Science and Sociology. *Annual Review of Sociology*, *46*(1), 61–81. https://doi.org/10/gg4zvc
+
+Lanning, K. (2017). What is the Relationship Between “Personality” and “Social” Psychologies? Network, Community, and Whole Text Analyses of The Structure of Contemporary Scholarship. *Collabra: Psychology*, *3*(1), 8. https://doi.org/10/gf5299
+
+#### Networks: Contagion
+
+Bond, R. M., Fariss, C. J., Jones, J. J., Kramer, A. D. I., Marlow, C., Settle, J. E., & Fowler, J. H. (2012). A 61-million-person experiment in social influence and political mobilization. *Nature*, *489*(7415), 295–298. https://doi.org/10/f3689v
+
+Buckee, C., Noor, A., & Sattenspiel, L. (2021). Thinking clearly about social aspects of infectious disease transmission. *Nature*, *595*(7866), 205–213. https://doi.org/10/gkzwmj
+
+Cacioppo, J. T., Fowler, J. H., & Christakis, N. A. (2009). Alone in the crowd: The structure and spread of loneliness in a large social network. *Journal of Personality and Social Psychology*, *97*(6), 977–991. https://doi.org/10.1037/a0016076
+
+Christakis, N. A., & Fowler, J. H. (2013). Social contagion theory: Examining dynamic social networks and human behavior. *Statistics in Medicine*, *32*(4), 556–577. https://doi.org/10/ck2j
+
+Johnson, N. F., Velásquez, N., Restrepo, N. J., Leahy, R., Gabriel, N., El Oud, S., Zheng, M., Manrique, P., Wuchty, S., & Lupu, Y. (2020). The online competition between pro- and anti-vaccination views. *Nature*, *582*(7811), 230–233. https://doi.org/10/ggvvjx
+
+Miller, G. (2011). Why Loneliness Is Hazardous to Your Health. *Science*, *331*(6014), 138–140. https://doi.org/10.1126/science.331.6014.138
+
+Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science*, *359*(6380), 1146–1151. https://doi.org/10/gc3jt6
+
+#### Networks: Cooperation
+
+Apicella, C. L., Marlowe, F. W., Fowler, J. H., & Christakis, N. A. (2012). Social networks and cooperation in hunter-gatherers. *Nature*, *481*(7382), 497–501. https://doi.org/10/fz3v4v
+
+#### Networks: The multivariate approach
+
+Boschloo, L., van Borkulo, C. D., Rhemtulla, M., Keyes, K. M., Borsboom, D., & Schoevers, R. A. (2015). The Network Structure of Symptoms of the Diagnostic and Statistical Manual of Mental Disorders. *PLOS ONE*, *10*(9), e0137621. https://doi.org/10/gfsz67
+
+
+
+#### Language analysis: Introduction and overview
+
+Benoit, K. (2019). *Chapter 28 Text as data: An overview*. 50.
+
+Mitra, T., & Gilbert, E. (2014). The language that gets people to give: Phrases that predict success on kickstarter. *Proceedings of the 17th ACM Conference on Computer Supported Cooperative Work & Social Computing*, 49–61. https://doi.org/10/gfrhh8
+
+Pennebaker, J. W., Chung, C. K., Frazee, J., Lavergne, G. M., & Beaver, D. I. (2014). When Small Words Foretell Academic Success: The Case of College Admissions Essays. *PLoS ONE*, *9*(12), e115844. https://doi.org/10/f6z8q5
+
+Pennebaker, J. W., Boyd, R. L., Jordan, K., & Blackburn, K. (2015). *The Development and Psychometric Properties of LIWC2015*. 26.
+
+Voigt, R., Camp, N. P., Prabhakaran, V., Hamilton, W. L., Hetey, R. C., Griffiths, C. M., Jurgens, D., Jurafsky, D., & Eberhardt, J. L. (2017). Language from police body camera footage shows racial disparities in officer respect. *Proceedings of the National Academy of Sciences*, *114*(25), 6521–6526. https://doi.org/10/gbktk7
+
+#### Language analysis and personality
+
+Lanning, K., Pauletti, R. E., King, L. A., & McAdams, D. P. (2018). Personality development through natural language. *Nature Human Behaviour*, *2*(5), 327–334. https://doi.org/10/gf5298
+
+Kern, M. L., Eichstaedt, J. C., Schwartz, H. A., Park, G., Ungar, L. H., Stillwell, D. J., Kosinski, M., Dziurzynski, L., & Seligman, M. E. P. (2014). From “Sooo excited!!!” to “So proud”: Using language to study development. *Developmental Psychology*, *50*(1), 178–188. https://doi.org/10.1037/a0035048
+
+Kosinski, M., Stillwell, D., & Graepel, T. (2013). Private traits and attributes are predictable from digital records of human behavior. *Proceedings of the National Academy of Sciences*, *110*(15), 5802–5805. https://doi.org/10/krx
+
+Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., & Ungar, L. H. (2013). Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach. *PLoS ONE*, *8*(9), e73791. https://doi.org/10/gdf36c
+
+#### Language analyses of Twitter, Facebook and the like
+
+Jones, N. M., Wojcik, S. P., Sweeting, J., & Silver, R. C. (2016). Tweeting negative emotion: An investigation of Twitter data in the aftermath of violence on college campuses. *Psychological Methods*, *21*(4), 526–541. https://doi.org/10.1037/met0000099
+
+Lanning, K., Wetherell, G., Warfel, E. A., & Boyd, R. L. (2021). Changing channels? A comparison of Fox and MSNBC in 2012, 2016, and 2020. *Analyses of Social Issues and Public Policy (ASAP)*. https://eprints.lancs.ac.uk/id/eprint/157304/ 
+
+   
